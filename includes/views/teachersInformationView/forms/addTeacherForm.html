@@ -1,0 +1,91 @@
+<form class="form-inline" name="insertNewTeacherForm">
+    <div class="row">
+        <div class="col-md-4">First Name:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewTeacherForm.firstName.$touched
+                                && insertNewTeacherForm.firstName.$invalid }">
+                <input class="form-control" name="firstName" type="text" placeholder=""
+                       ng-model="vm.firstName" required>
+                <div ng-messages="insertNewTeacherForm.firstName.$error"
+                     ng-show="insertNewTeacherForm.firstName.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">Last Name:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewTeacherForm.lastName.$touched
+                                && insertNewTeacherForm.lastName.$invalid }">
+                <input class="form-control" name="lastName" type="text" placeholder=""
+                       ng-model="vm.lastName" required>
+                <div ng-messages="insertNewTeacherForm.lastName.$error"
+                     ng-show="insertNewTeacherForm.lastName.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">City:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewTeacherForm.city.$touched
+                                && insertNewTeacherForm.city.$invalid }">
+                <input class="form-control" name="city" type="text" placeholder=""
+                       ng-model="vm.city" required>
+                <div ng-messages="insertNewTeacherForm.city.$error"
+                     ng-show="insertNewTeacherForm.city.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">Street:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewTeacherForm.street.$touched
+                                && insertNewTeacherForm.street.$invalid }">
+                <input class="form-control" name="street" type="text" placeholder=""
+                       ng-model="vm.street" required>
+                <div ng-messages="insertNewTeacherForm.street.$error"
+                     ng-show="insertNewTeacherForm.street.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">House Number:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewTeacherForm.houseNum.$touched
+                                && insertNewTeacherForm.houseNum.$invalid }">
+                <input class="form-control" name="houseNum" type="number" placeholder=""
+                       ng-model="vm.houseNum" required>
+                <div ng-messages="insertNewTeacherForm.houseNum.$error"
+                     ng-show="insertNewTeacherForm.houseNum.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">Birthday:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewTeacherForm.birthday.$touched
+                                && insertNewTeacherForm.birthday.$invalid }">
+                <input class="form-control" name="birthday" type="date" placeholder=""
+                       ng-model="vm.birthday" required>
+                <div ng-messages="insertNewTeacherForm.birthday.$error"
+                     ng-show="insertNewTeacherForm.birthday.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
