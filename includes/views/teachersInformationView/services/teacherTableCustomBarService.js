@@ -10,4 +10,8 @@ teachersInformationModule.service('teacherTableCustomBarService', function(teach
     this.saveTeacherToDB = function(teacher) {
         return teacherTableCustomBarFactory.saveTeacherToDB(teacher);
     }
+
+    this.saveTeacherCourseToDB = function(teacher) {
+        return teacherTableCustomBarFactory.saveTeacherCourseToDB(teacher);
+    }
 });

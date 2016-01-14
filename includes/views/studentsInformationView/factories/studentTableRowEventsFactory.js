@@ -26,7 +26,18 @@ studentsInformationModule.factory('studentTableRowEventsFactory', function($wind
 
             var url = "../StudentDBWebService/student/getStudentCoursesByStudentId/"
                 + row.id;
-            crudFactory.getListModels(url,'#studentCourses','#studentCoursesModal');
+            factory.controller.selectedModel = row;
+            crudFactory.getListModels(url,'#modelCourses','#studentCoursesModal');
+        },
+        'click .updateStudentCourse' : function(e, value, row, index) {
+            var url = "../StudentDBWebService/studentCourse/updateStudentCourse";
+            var msg = "Changes Of The Student Course: "+ row.course.name + " Were Saved To The DB Successfully";
+            crudFactory.updateModel(row,url,msg);
+        },
+        'click .deleteStudentCourse' : function(e, value, row, index) {
+            var url = "../StudentDBWebService/studentCourse/deleteStudentCourse/" + row.id;
+            var msg = "Student course: " + row.course.name + " Was Deleted From The DB Successfully";
+            crudFactory.deleteModel(url,msg);
         }
     };
 

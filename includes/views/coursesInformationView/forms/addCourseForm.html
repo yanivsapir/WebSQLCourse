@@ -1,0 +1,47 @@
+<form class="form-inline" name="insertNewCourseForm">
+    <div class="row">
+        <div class="col-md-4">Course Name:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewCourseForm.name.$touched
+                                && insertNewCourseForm.name.$invalid }">
+                <input class="form-control" name="name" type="text" placeholder=""
+                       ng-model="vm.name" required>
+                <div ng-messages="insertNewCourseForm.name.$error"
+                     ng-show="insertNewCourseForm.name.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">Semester:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewCourseForm.semester.$touched
+                                && insertNewCourseForm.semester.$invalid }">
+                <input class="form-control" name="semester" type="text" placeholder=""
+                       ng-model="vm.semester" required>
+                <div ng-messages="insertNewCourseForm.semester.$error"
+                     ng-show="insertNewCourseForm.semester.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">Year:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewCourseForm.year.$touched
+                                && insertNewCourseForm.year.$invalid }">
+                <input class="form-control" name="year" type="text" placeholder=""
+                       ng-model="vm.year" required>
+                <div ng-messages="insertNewCourseForm.year.$error"
+                     ng-show="insertNewCourseForm.year.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</form>

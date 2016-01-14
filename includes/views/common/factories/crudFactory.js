@@ -10,9 +10,9 @@ commonModule.factory('crudFactory', function($window,requestHandlerFactory) {
         requestHandlerFactory.setController(controller);
     }
 
-    factory.updateModel = function (teacher, url, msg) {
+    factory.updateModel = function (model, url, msg) {
         factory.controller.msg = msg;
-        requestHandlerFactory.postRequestWithData(teacher, url);
+        requestHandlerFactory.postRequestWithData(model, url);
     }
 
     factory.deleteModel = function (url, msg) {

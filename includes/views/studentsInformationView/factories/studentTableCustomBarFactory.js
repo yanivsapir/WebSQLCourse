@@ -10,7 +10,7 @@ studentsInformationModule.factory('studentTableCustomBarFactory', function($wind
         requestHandlerFactory.setController(controller);
     }
 
-    factory.saveStudentToDB = function (student) {
+    factory.saveStudentToDB = function () {
         var url = "../StudentDBWebService/student/insertNewStudentToDB";
         factory.controller.msg = "New Student Saved To The DB Successfully";
         var student = JSON.stringify({
@@ -22,6 +22,16 @@ studentsInformationModule.factory('studentTableCustomBarFactory', function($wind
             houseNum: parseInt(factory.controller.houseNum)
         });
         return requestHandlerFactory.postRequestWithData(student, url);
+    }
+
+    factory.saveStudentCourseToDB = function () {
+        var url = "../StudentDBWebService/studentCourse/insertNewStudentCourse";
+        var studentCourse = JSON.stringify({
+            "course" : factory.controller.chosenCourse,
+            "student": factory.controller.selectedModel,
+            "grade": factory.controller.chosenGrade
+        })
+        return requestHandlerFactory.postRequestWithData(studentCourse, url);
     }
     return factory;
 });

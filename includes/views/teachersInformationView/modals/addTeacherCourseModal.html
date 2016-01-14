@@ -1,0 +1,34 @@
+<div class="modal-footer">
+    <div class="modal fade" id="addTeacherCoursesModal" tabindex="-1"
+         role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="vm.close()"
+                            aria-hidden="true">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                    <h4 class="modal-title custom_align" id="Heading3" align="center">
+                        Courses Of The Chosen Teacher:
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <select class="form-control" ng-model="vm.chosenCourse"
+                                    ng-options="course as ('Course: ' + course.name + ' | Semester: ' + course.semester + ' | Year: ' + course.year)
+                                     for course in vm.courses"></select>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-default" ng-click="vm.insertTeacherCourse()">
+                                <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

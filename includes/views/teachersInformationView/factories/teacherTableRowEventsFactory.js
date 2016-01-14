@@ -26,7 +26,13 @@ teachersInformationModule.factory('teacherTableRowEventsFactory', function($wind
 
             var url = "../StudentDBWebService/teacher/getTeacherCoursesByTeacherId/"
                 + row.id;
-            crudFactory.getListModels(url,'#teacherCourses','#teacherCoursesModal');
+            factory.controller.selectedModel = row;
+            crudFactory.getListModels(url,'#modelCourses','#teacherCoursesModal');
+        },
+        'click .deleteTeacherCourse' : function(e, value, row, index) {
+            var url = "../StudentDBWebService/teacherCourse/deleteTeacherCourse/" + row.id;
+            var msg = "Teacher course: " + row.course.name + " Was Deleted From The DB Successfully";
+            crudFactory.deleteModel(url,msg);
         }
     };
 

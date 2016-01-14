@@ -4,7 +4,9 @@ var ShenkarDBApp = angular.module('ShenkarDBApp', [
 	'ngMessages',
 	'commonModule',
     'studentsInformationModule',
-    'teachersInformationModule'
+    'teachersInformationModule',
+    'coursesInformationModule',
+    'courseQueriesModule'
 ]);
 
 
@@ -21,5 +23,19 @@ ShenkarDBApp.config(function($stateProvider, $urlRouterProvider) {
               url: "/students",
               controller : 'studentsInformationController as vm',
               templateUrl : 'includes/views/studentsInformationView/studentsInformationView.html'
+          })
+          .state('courses', {
+              url: "/courses",
+              controller : 'coursesInformationController as vm',
+              templateUrl : 'includes/views/coursesInformationView/coursesInformationView.html'
+          })
+          .state('courseQueries', {
+              url: "/courseQueries",
+              controller : 'courseQueriesController as vm',
+              templateUrl : 'includes/views/courseQueriesView/courseQueriesView.html'
+          })
+          .state('erd', {
+              url: "/erd",
+              templateUrl : 'includes/views/erdView/erdView.html'
           });
 });

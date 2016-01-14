@@ -1,0 +1,24 @@
+<div id="courseQueriesViewTable">
+    <div id="courseQueriesToolbar" class="btn-group">
+        <div class="col-md-7">
+            <select class="form-control" ng-model="vm.chosenCourse"
+                    ng-options="course as ('Course: ' + course.name + ' | Semester: ' + course.semester + ' | Year: ' + course.year)
+                                     for course in vm.courses"></select>
+        </div>
+        <div class="col-md-2">
+            <input class="form-control" ng-model="vm.limit" placeholder="Limit" type="number" min="0">
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" ng-model="vm.topOrBottom">
+                <option value="1">Top</option>
+                <option value="2">Bottom</option>
+            </select>
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-default" ng-click="vm.getCourseQueriesResultSet()">
+                <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div course-queries-table></div>
+</div>

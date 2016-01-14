@@ -1,0 +1,45 @@
+<table data-toggle="table" data-url="../StudentDBWebService/course/getAllCourses" id="table"
+       data-sort-name="id" data-sort-order="asc"
+       data-show-columns="true" data-show-refresh="true"
+       data-show-toggle="true" data-search="true"
+       data-show-export="true" data-pagination="true"
+       data-show-multi-sort="true" data-show-pagination-switch="true"
+       data-filter-control="true"
+       data-toolbar="#courseToolbar">
+    <thead>
+    <tr>
+        <th data-field="id" data-halign="center" data-align="center" data-sortable="true"
+            data-filter-control="input">Course ID
+        </th>
+        <th data-field="name" data-halign="center" data-align="center"
+            data-sortable="true" data-editable="true" data-filter-control="input">Course Name
+        </th>
+        <th data-field="semester" data-halign="center" data-align="center"
+            data-sortable="true" data-editable="true" data-filter-control="input">Semester
+        </th>
+        <th data-field="year" data-halign="center" data-align="center"
+            data-sortable="true" data-editable="true" data-filter-control="input">year
+        </th>
+        <th data-field="operate" data-align="center"
+            data-formatter="courseTableOperateFormatter" data-events="operateEvents">Operations</th>
+    </tr>
+    </thead>
+</table>
+<script>
+    var table = $('#table');
+    table.bootstrapTable({
+        pageSize: 10,
+        contextMenu: '#example1-context-menu',
+        onContextMenuItem: function (row, $el) {
+            if ($el.data("item") == "edit") {
+                alert("Edit: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            } else if ($el.data("item") == "delete") {
+                alert("Delete: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            } else if ($el.data("item") == "action1") {
+                alert("Action1: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            } else if ($el.data("item") == "action2") {
+                alert("Action2: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            }
+        }
+    });
+</script>

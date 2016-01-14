@@ -31,6 +31,8 @@ commonModule.factory('requestHandlerFactory', function($http, $q, $window) {
 
     factory.handleSuccess = function (response) {
         $('#add').modal('hide');
+        $('#addStudentCoursesModal').modal('hide');
+        $("#addTeacherCoursesModal").modal("hide");
         factory.controller.msgStyle = factory.controller.successMsg;
         $(factory.resfreshTable);
         return (response.data);
@@ -48,6 +50,11 @@ commonModule.factory('requestHandlerFactory', function($http, $q, $window) {
         $('#table').bootstrapTable('refresh', {
             url : factory.controller.refreshUrl
         });
+        if($('#modelCourses').length > 0) {
+            $('#modelCourses').bootstrapTable('refresh', {
+                url: factory.controller.modelCourseRefreshUrl + factory.controller.selectedModel.id
+            });
+        }
     };
     return factory;
 });

@@ -10,4 +10,9 @@ studentsInformationModule.service('studentTableCustomBarService', function(stude
     this.saveStudentToDB = function(student) {
         return studentTableCustomBarFactory.saveStudentToDB(student);
     }
+
+    this.saveStudentCourseToDB = function(student) {
+        return studentTableCustomBarFactory.saveStudentCourseToDB(student);
+    }
+
 });

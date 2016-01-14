@@ -23,5 +23,14 @@ teachersInformationModule.factory('teacherTableCustomBarFactory', function($wind
         });
         return requestHandlerFactory.postRequestWithData(teacher, url);
     }
+
+    factory.saveTeacherCourseToDB = function () {
+        var url = "../StudentDBWebService/teacherCourse/insertNewTeacherCourseToDB";
+        var teacherCourse = JSON.stringify({
+            "course" : factory.controller.chosenCourse,
+            "teacher": factory.controller.selectedModel,
+        })
+        return requestHandlerFactory.postRequestWithData(teacherCourse, url);
+    }
     return factory;
 });

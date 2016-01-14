@@ -1,0 +1,17 @@
+<div id="coursesViewTable">
+    <ul id="example1-context-menu" class="dropdown-menu">
+        <li data-item="edit"><a>Edit</a></li>
+        <li data-item="delete"><a>Delete</a></li>
+        <li data-item="action1"><a>Action Here</a></li>
+        <li data-item="action2"><a>And Action Here</a></li>
+    </ul>
+    <div id="courseToolbar" class="btn-group">
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add">
+            <i class="glyphicon glyphicon-plus"></i>
+            Insert New Course
+        </button>
+        <label ng-if="vm.msg" ng-style="vm.msgStyle"><span style="margin-right: 20px"/>{{vm.msg}}<span style="margin-left: 20px"/></label>
+    </div>
+    <div course-table></div>
+    <div add-course-modal></div>
+</div>

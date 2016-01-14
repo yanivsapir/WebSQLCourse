@@ -1,0 +1,43 @@
+<table data-toggle="table" id="table"
+       data-sort-name="grade" data-sort-order="desc"
+       data-show-columns="true" data-show-refresh="true"
+       data-show-toggle="true" data-search="true"
+       data-show-export="true" data-pagination="true"
+       data-show-multi-sort="true" data-show-pagination-switch="true"
+       data-filter-control="true"
+       data-toolbar="#courseQueriesToolbar">
+    <thead>
+    <tr>
+        <th data-field="course.name" data-halign="center" data-align="center" data-sortable="true"
+            data-filter-control="input" data-events="operateEvents">Course Name
+        </th>
+        <th data-field="student.firstName" data-halign="center" data-align="center"
+            data-sortable="true" data-filter-control="input">First Name
+        </th>
+        <th data-field="student.lastName" data-halign="center" data-align="center"
+            data-sortable="true" data-filter-control="input">Last Name
+        </th>
+        <th data-field="grade" data-halign="center" data-align="center"
+            data-sortable="true" data-filter-control="input">Grade
+        </th>
+    </tr>
+    </thead>
+</table>
+<script>
+    var table = $('#table');
+    table.bootstrapTable({
+        pageSize: 10,
+        contextMenu: '#example1-context-menu',
+        onContextMenuItem: function (row, $el) {
+            if ($el.data("item") == "edit") {
+                alert("Edit: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            } else if ($el.data("item") == "delete") {
+                alert("Delete: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            } else if ($el.data("item") == "action1") {
+                alert("Action1: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            } else if ($el.data("item") == "action2") {
+                alert("Action2: " + row.id + ' ' + row.firstName + ' ' + row.lastName);
+            }
+        }
+    });
+</script>

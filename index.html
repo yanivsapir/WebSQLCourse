@@ -53,6 +53,7 @@
             <script src="includes/views/teachersInformationView/directives/teacherTableDirective.js"></script>
             <script src="includes/views/teachersInformationView/directives/addTeacherModalDirective.js"></script>
             <script src="includes/views/teachersInformationView/directives/addTeacherFormDirective.js"></script>
+            <script src="includes/views/teachersInformationView/directives/addTeacherCourseDirective.js"></script>
             <script src="includes/views/teachersInformationView/directives/teacherCourseModalDirective.js"></script>
             <!--table-->
             <script src="includes/views/teachersInformationView/tables/table-formatters/teacherTableFormatters.js"></script>
@@ -72,9 +73,33 @@
             <script src="includes/views/studentsInformationView/directives/addStudentModalDirective.js"></script>
             <script src="includes/views/studentsInformationView/directives/addStudentFormDirective.js"></script>
             <script src="includes/views/studentsInformationView/directives/studentCourseModalDirective.js"></script>
+            <script src="includes/views/studentsInformationView/directives/addStudentCourseDirective.js"></script>
             <!--table-->
             <script src="includes/views/studentsInformationView/tables/table-formatters/studentTableFormatters.js"></script>
-
+        <!--coursesInformationView-->
+            <!--module-->
+            <script src="includes/views/coursesInformationView/modules/coursesInformationModule.js"></script>
+            <!--factories-->
+            <script src="includes/views/coursesInformationView/factories/courseTableRowEventsFactory.js"></script>
+            <script src="includes/views/coursesInformationView/factories/courseTableCustomBarFactory.js"></script>
+            <!--services-->
+            <script src="includes/views/coursesInformationView/services/courseTableRowEventsService.js"></script>
+            <script src="includes/views/coursesInformationView/services/courseTableCustomBarService.js"></script>
+            <!--controllers-->
+            <script src="includes/views/coursesInformationView/controllers/coursesInformationController.js"></script>
+            <!--directives-->
+            <script src="includes/views/coursesInformationView/directives/courseTableDirective.js"></script>
+            <script src="includes/views/coursesInformationView/directives/addCourseModalDirective.js"></script>
+            <script src="includes/views/coursesInformationView/directives/addCourseFormDirective.js"></script>
+            <!--table-->
+            <script src="includes/views/coursesInformationView/tables/table-formatters/courseTableFormatters.js"></script>
+        <!--courseQueriesView-->
+            <!--module-->
+            <script src="includes/views/courseQueriesView/modules/courseQueriesModule.js"></script>
+            <!--controllers-->
+            <script src="includes/views/courseQueriesView/controllers/courseQueriesController.js"></script>
+            <!--directives-->
+            <script src="includes/views/courseQueriesView/directives/courseQueriesDirective.js"></script>
 </head>
 <body>
 
@@ -88,12 +113,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Binary admin</a>
-        </div>
-        <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
+            <a class="navbar-brand" href="#/erd"><img src="includes/img/shenkar.png" style="position:relative; bottom: 25%; right: 6%" height="43" width="250"></a>
         </div>
     </nav>
     <nav class="navbar-default navbar-side" role="navigation">
@@ -103,51 +123,25 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     <img src="includes/img/find_user.png" class="user-image img-responsive"/>
                 </li>
                 <li>
-                    <a class="active-menu" href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    <a class="active-menu" href="#/erd"><i class="fa fa-desktop fa-3x"></i> ERD</a>
                 </li>
                 <li>
-                    <a href="ui.html"><i class="fa fa-desktop fa-3x"></i> UI Elements</a>
+                    <a href="#/courseQueries"><i class="fa fa-bar-chart-o fa-3x"></i>Course Top Queries</a>
                 </li>
                 <li>
-                    <a href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Tabs & Panels</a>
-                </li>
-                <li>
-                    <a href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
-                </li>
-                <li>
-                    <a href="table.html"><i class="fa fa-table fa-3x"></i> Table Examples</a>
-                </li>
-                <li>
-                    <a href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span
+                    <a href="#"><i class="fa fa-sitemap fa-3x"></i>Information Tables<span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Second Level Link</a>
+                            <a href="#/teachers">Lecturers Information</a>
                         </li>
                         <li>
-                            <a href="#">Second Level Link</a>
+                            <a href="#/studetns">Students Information</a>
                         </li>
                         <li>
-                            <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Link</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Link</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Link</a>
-                                </li>
-                            </ul>
+                            <a href="#/courses">Courses Information</span></a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
                 </li>
             </ul>
         </div>
