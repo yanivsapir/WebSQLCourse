@@ -1,5 +1,20 @@
 <form class="form-inline" name="insertNewStudentForm">
     <div class="row">
+        <div class="col-md-4">Student ID:</div>
+        <div class="col-md-8">
+            <div class="form-group" ng-class="{ 'has-error': insertNewStudentForm.studentId.$touched
+                                && insertNewStudentForm.studentId.$invalid }">
+                <input class="form-control" name="studentId" type="number" placeholder=""
+                       ng-model="vm.studentId" required>
+                <div ng-messages="insertNewStudentForm.studentId.$error"
+                     ng-show="insertNewStudentForm.studentId.$touched">
+                    <div ng-messages-include="includes/views/input-errors-messages/messages.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
         <div class="col-md-4">First Name:</div>
         <div class="col-md-8">
             <div class="form-group" ng-class="{ 'has-error': insertNewStudentForm.firstName.$touched

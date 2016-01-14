@@ -14,6 +14,7 @@ teachersInformationModule.factory('teacherTableCustomBarFactory', function($wind
         var url = "../StudentDBWebService/teacher/insertNewTeacherToDB";
         factory.controller.msg = "New Teacher Saved To The DB Successfully";
         var teacher = JSON.stringify({
+            id: factory.controller.teacherId,
             firstName: factory.controller.firstName,
             lastName: factory.controller.lastName,
             birthday: factory.controller.birthday,

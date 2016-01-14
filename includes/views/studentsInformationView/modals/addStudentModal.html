@@ -14,7 +14,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success btn-lg"
-                        ng-disabled="insertNewStudentForm.birthday.$invalid ||
+                        ng-disabled="insertNewStudentForm.studentId.$invalid ||
+                            insertNewStudentForm.birthday.$invalid ||
                             insertNewStudentForm.firstName.$invalid ||
                             insertNewStudentForm.lastName.$invalid ||
                             insertNewStudentForm.city.$invalid ||
